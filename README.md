@@ -21,6 +21,7 @@ Table of Content
   * [mpe2ts, mpe2aac, mpe2mpa](#mpe2ts-mpe2aac-mpe2mpa)
   * [eti2zmq](#eti-eti2zmq)
   * [ni2out](#eti-ni2out)
+  * [ni2http](#eti-ni2http)
 * [Satellite DAB(+) feeds](#satellite-dab-feeds)
   * [Guide](#guide)
     * [dvbstream](#dvbstream)
