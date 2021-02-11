@@ -78,7 +78,7 @@ Additional libraries which are needed:
 Installation
 ----------------
     
-    git clone https://github.com/piratfm/eti-tools.git
+    git clone https://github.com/DABodr/eti-tools.git
     cd eti-tools/
 
 If you need to enable ZeroMQ (see above): Make sure you have installed ZeroMQ and edit `Makefile` and uncomment (= remove`#` in front of) lines 23 and 24, then
