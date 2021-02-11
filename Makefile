@@ -13,15 +13,15 @@ OBJS_MPE2MPA = mpe2mpa.o
 OBJS_MPE2TS = mpe2ts.o
 OBJS_DVBIPMPEG2TS = dvb-ip-mpe2ts.o
 OBJS_ETI2ZMQ = eti2zmq.o
-CFLAGS += -I.
+CFLAGS+=-I. -Ilibshout-2.2.2/include
 LDFLAGS += -lm
 
 
 #####################################################
 # Uncomment this 2 lines if you want to enable ZeroMQ
 #####################################################
-#CFLAGS+= -DHAVE_ZMQ
-#LDFLAGS+= -lzmq
+CFLAGS+= -DHAVE_ZMQ
+LDFLAGS+= -lzmq
 
 
 ##################################################
@@ -31,7 +31,7 @@ LDFLAGS += -lm
 #LDFLAGS+= -lfec
 
 
-all: cleanapps ni2out ts2na na2ts na2ni edi2eti fedi2eti mpe2aac mpe2mpa mpe2ts dvb-ip-mpe2ts eti2zmq
+all: cleanapps ni2out ts2na na2ts na2ni edi2eti fedi2eti mpe2aac mpe2mpa mpe2ts dvb-ip-mpe2ts eti2zmq ni2http
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
@@ -99,3 +99,4 @@ install:
 	install -m 755 mpe2ts $(DESTDIR)/usr/bin
 	install -m 755 dvb-ip-mpe2ts $(DESTDIR)/usr/bin
 	install -m 755 eti2zmq $(DESTDIR)/usr/bin
+        install -m 755 ni2http $(DESTDIR)/usr/bin
