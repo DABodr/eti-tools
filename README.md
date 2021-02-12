@@ -188,18 +188,18 @@ The `--delay` option has to be used for offline-relaying (from the file, not fro
 
 To get a list of audio service IDs, use `ni2out --list -i <inputfile>`
 
-    ETI ni2http
-    ----------------------
+ETI ni2http
+----------------------
 
-    ni2http is an ETI-NI to HTTP or ZeroMQ converter. This tool converts an eti-stream to mp2 resp. AAC and relays it to icecast2 or ODR-DabMUX server.
+ni2http is an ETI-NI to HTTP or ZeroMQ converter. This tool converts an eti-stream to mp2 resp. AAC and relays it to icecast2 or ODR-DabMUX server.
 
-    ETI-NI streams from terrestrial DAB(+) ensembles can also be created by eti-stuff or dabtools. For satellite feeds see above.
+ETI-NI streams from terrestrial DAB(+) ensembles can also be created by eti-stuff or dabtools. For satellite feeds see above.
 
     usage: ./ni2http [--list] [--delay] [-i <inputfile>] [-c <config_file>] [-s <SID>]
 
-    Use --list option to find SIDs and station names inside the ETI stream. If you wish to write the stream to stdout, then use ni2http --sid <SID>. In this case the config_file isn't needed. The --delay option has to be used for offline-relaying (from the file, not from the stream). So in that case the application will wait 24ms after each ETI frame in order to make pseudo-realtime streaming.
+Use --list option to find SIDs and station names inside the ETI stream. If you wish to write the stream to stdout, then use ni2http --sid <SID>. In this case the config_file isn't needed. The --delay option has to be used for offline-relaying (from the file, not from the stream). So in that case the application will wait 24ms after each ETI frame in order to make pseudo-realtime streaming.
 
-    The application is also able to parse FIC for auto-detecting of station name and X-PAD of DAB and DAB+ for setting current DLS (song titles).
+The application is also able to parse FIC for auto-detecting of station name and X-PAD of DAB and DAB+ for setting current DLS (song titles).
 
     Config sample:
 
@@ -243,9 +243,9 @@ To get a list of audio service IDs, use `ni2out --list -i <inputfile>`
     zmq:       tcp://127.0.0.1:9001
     In [server] section the parameters of Icecast2 server must be set. In [channel] sections at least service ID of the channel must be presented.
 
-    If you wish to write the stream to a file, then use file to specify its location. If streaming to Icecast2 server is needed, then specify mount-point on the icecast server.
+If you wish to write the stream to a file, then use file to specify its location. If streaming to Icecast2 server is needed, then specify mount-point on the icecast server.
 
-    If you wish to re-stream to ODR-DabMUX then set the destination of the ZeroMQ URI to muxing server. To get a list of audio service IDs, use ni2http --list -i <inputfile>
+If you wish to re-stream to ODR-DabMUX then set the destination of the ZeroMQ URI to muxing server. To get a list of audio service IDs, use        ni2http --list -i <inputfile>
 
 
 Satellite DAB(+) feeds
