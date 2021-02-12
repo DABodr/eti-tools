@@ -241,7 +241,7 @@ The application is also able to parse FIC for auto-detecting of station name and
     sid:        0xc224
     extract_pad: 0
     zmq:       tcp://127.0.0.1:9001
-    In [server] section the parameters of Icecast2 server must be set. In [channel] sections at least service ID of the channel must be presented.
+In [server] section the parameters of Icecast2 server must be set. In [channel] sections at least service ID of the channel must be presented.
 
 If you wish to write the stream to a file, then use file to specify its location. If streaming to Icecast2 server is needed, then specify mount-point on the icecast server.
 
