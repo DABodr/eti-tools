@@ -195,7 +195,9 @@ ni2http is an ETI-NI to HTTP or ZeroMQ converter. This tool converts an eti-stre
 
 ETI-NI streams from terrestrial DAB(+) ensembles can also be created by eti-stuff or dabtools. For satellite feeds see above.
 
-usage: ./ni2http [--list] [--delay] [-i <inputfile>] [-c <config_file>] [-s <SID>]
+usage: 
+	./ni2http [--list] [--delay] [-i <inputfile>] [-c <config_file>] [-s <SID>]
+
 Use --list option to find SIDs and station names inside the ETI stream. If you wish to write the stream to stdout, then use ni2http --sid <SID>. In this case the config_file isn't needed. The --delay option has to be used for offline-relaying (from the file, not from the stream). So in that case the application will wait 24ms after each ETI frame in order to make pseudo-realtime streaming.
 
 The application is also able to parse FIC for auto-detecting of station name and X-PAD of DAB and DAB+ for setting current DLS (song titles).
